@@ -1,0 +1,49 @@
+<!doctype html> 
+<html ng-app> 
+<!-- Talar om att detta är en Angular-applikation --> 
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet"> 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script> 
+<script src="js/app.js"></script>
+</head> 
+<body ng-app="app">
+<div id="container">
+<div class="row">
+	<div class="col-md-2">
+		<p>
+			<label>Skriv ditt Namn här:</label> 
+			<input type="text" class="form-control" ng-model="name" /> 
+		</p>
+		<!— ng-model är vår data, det vi vill visa, det intressanta. Textrutan binds till vår model som binds till vår HTML-->
+		 <hr> <h1>Hej {{name}}!</h1> 
+		 <!— ng-model skrivs ut här. Kallas för directive --> 
+	</div>
+	<div class="col-md-2">
+		<div> <label>First number:</label> <input type="number" ng-model="num1" /><br /> 
+			<label>Second number:</label> <input type="number" ng-model="num2" /> 
+			<hr> <h1>Sum: {{num1 + num2}}</h1> <h1>Product: {{num1 * num2}}</h1> 
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div> 
+		<label>First number:</label><input type="number" ng-model="num3" /><br /> 
+		<label>Second number:</label> <input type="number" ng-model="num4" /> 
+		<hr> <h1>Sum: {{num3 + num4}}</h1> <h1>Product: {{num3 * num4}}</h1> 
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div>
+			<label>First number:</label> <input type="number" ng-model="num5" /><br /> 
+			<label>Second number:</label> <input type="number" ng-model="num6" /> 
+			<hr> <h1>Sum: {{num5}} + {{num6}} = {{sum + num6}}</h1> 
+			<h1>{{num5}} * {{num6}} = {{num5 * num6}}</h1> 
+		</div>
+	</div>
+</div>
+</div>
+    <script src="js/bootstrap.min.js"></script> 
+ </body> 
+ </html>
