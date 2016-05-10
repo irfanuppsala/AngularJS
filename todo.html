@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script> 
+<script src="js/testApp.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<body ng-app="app">
+<h2>Todo tasks</h2>
+<div id="container">
+<div class="row" ng-controller="MainController as main">
+	<div class="col-md-2">
+		<!--  Simple list -->
+		<h4>Simple List</h4>
+		 <ul>
+		 	<li ng-repeat="task in main.tasks">
+		 		<input type="checkbox" ng-model="task.done" /><span ng-hide="task.done">{{task.name}}</span>
+		 	</li>
+		 </ul>
+	</div>
+	<div class="col-md-2">
+		<!-- List with filter -->
+		<h4>Filtered List</h4>
+		<ul>
+		 	<li ng-repeat="lang in main.language | filter: 'c' ">
+		 		<input type="checkbox" ng-model="lang.done" /><span ng-hide="lang.done">{{lang.name}}</span>
+		 	</li>
+		 </ul>
+	</div>
+
+</div>
+</div>
+</body>
+</html>
