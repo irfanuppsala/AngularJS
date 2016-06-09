@@ -1,0 +1,28 @@
+<div class="form-group" ng-controller="HomeController">
+    <h1>Employees List</h1>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td>Search: <input type="text" class="form-control pull-left" placeholder="Search employee..." value="" ng-model="search"></td>
+        </tr>
+        <tr>
+
+            <td><strong>Name</strong></td>
+            <td><strong>Position</strong></td>
+            <td><strong>Salary</strong></td>
+            <td><strong>Start Date</strong></td>
+            <td><strong>Office</strong></td>
+            <td><strong>Ext</strong></td>
+
+        </tr>
+        <tr ng-repeat="record in myData | filter: search">
+            <td>{{record.name}}</td>
+            <td>{{record.position}}</td>
+            <td>{{record.salary}}</td>
+            <td>{{record.start_date}}</td>
+            <td>{{record.office}}</td>
+            <td>{{record.extn}}</td>
+        </tr>
+    </table>
+</div>
+
+
