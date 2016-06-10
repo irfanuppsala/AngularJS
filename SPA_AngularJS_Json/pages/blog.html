@@ -1,7 +1,23 @@
-<div>
-    <h1>Blog Page</h1>
-
-    <p>{{ message }}</p>
+<div class="form-group" ng-controller="BlogController">
+    <div class="col-md-3"><input type="text" name="search" id="searchInput" class="form-control pull-left" placeholder="Search employee..." value="" ng-model="search"></div>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td><strong>Image</strong></td>
+            <td><strong>Title</strong></td>
+            <td><strong>Genre</strong></td>
+            <td><strong>Cast</strong></td>
+            <td><strong>Release Date</strong></td>
+            <td><strong>Duration</strong></td>
+        </tr>
+        <tr ng-repeat="record in filmData | filter: search">
+            <td><img src="images/{{record.image}}"></td>
+            <td>{{record.title}}</td>
+            <td>{{record.genre}}</td>
+            <td>{{record.cast}}</td>
+            <td>{{record.release_date}}</td>
+            <td>{{record.duration}}</td>
+        </tr>
+    </table>
 </div>
 
 

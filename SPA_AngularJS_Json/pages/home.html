@@ -2,17 +2,15 @@
     <h1>Employees List</h1>
     <table class="table table-bordered table-hover">
         <tr>
-            <td>Search: <input type="text" class="form-control pull-left" placeholder="Search employee..." value="" ng-model="search"></td>
+            <td><input type="text" class="form-control pull-left" placeholder="Search employee..." value="" ng-model="search"></td>
         </tr>
         <tr>
-
             <td><strong>Name</strong></td>
             <td><strong>Position</strong></td>
             <td><strong>Salary</strong></td>
             <td><strong>Start Date</strong></td>
             <td><strong>Office</strong></td>
             <td><strong>Ext</strong></td>
-
         </tr>
         <tr ng-repeat="record in myData | filter: search">
             <td>{{record.name}}</td>

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "title": "Titanic",
+      "genre": "Drama, Romance, Action",
+      "cast": "Ronaldo Dichaprio, Kate Vincelet",
+      "release_date": "2011/04/25",
+      "duration": "3 hours",
+      "image": "clancy.jpg"
+    },
+    {
+      "title": "Fast & Furious 7",
+      "genre": "Action, Romance",
+      "cast": "Vin Diesel, Paul Walker",
+      "release_date": "2014/03/10",
+      "duration": "2.5 hours",
+      "image": "Hamilton.jpg"
+    },
+    {
+      "title": "Lord of the rings",
+      "genre": "Drama, Romance, Action",
+      "cast": "James Smith, Kate Vincelet",
+      "release_date": "2009/04/25",
+      "duration": "3 hours",
+      "image": "liftare.jpg"
+    }
+  ]
+}
